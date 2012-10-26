@@ -5,8 +5,8 @@
     <meta charset="utf-8"/>
     <meta name="author" content="Dzenan Ridjanovic"/>
     <title>
-      d_art_pen, developed with Dartling.
-    </title>   
+      art_pen, developed with Dartling.
+    </title>
     <link rel="stylesheet" href="css/layout.css"/>
     <link rel="stylesheet" href="css/layout2c.css"/>
     <link rel="stylesheet" href="css/link.css"/>
@@ -19,17 +19,17 @@
   <body>
     <header>
       <h2>
-        DArt.Pen: Start Art On Dart with Dartling
+        DArt Pen: Start Art On Dart with Dartling
         <img src="img/ondart0.png"/>
       </h2>
     </header>
-    
-    <section> 
-      <header id='menu'/></header> 
-      
+
+    <section>
+      <header id='menu'/></header>
+
       <section id='entities'/></section>
-         
-      <section> 
+
+      <section>
         <label>Pen:</label>
         <select id="color">
           <option>black</option>
@@ -55,19 +55,19 @@
         </select>
         <label for="down">down</label>
         <input type="checkbox" id="down"/>
-        <label for="write">write</label>
-        <input type="text" id="write" size="8"/>
         <label for="visible">visible</label>
         <input type="checkbox" id="visible"/>
-        &nbsp &nbsp
+        <label for="write">write</label>
+        <input type="text" id="write" size="8"/>
+        &nbsp &nbsp &nbsp
         <input type="text" id="artCount" size="1"/>
         <button id="art">Art</button>
-        &nbsp  
+        &nbsp
         <input type="text" id="onDartCount" size="2"/>
         <button id="onDart">On Dart</button>
-        &nbsp &nbsp 
+        &nbsp &nbsp
         <button id="erase">Erase</button>
-        &nbsp &nbsp 
+        &nbsp &nbsp
         <select id="demos">
           <option selected>demos</option>
           <option>1</option>
@@ -88,49 +88,49 @@
           <option>16</option>
         </select>
       </section>
-      
-      <section> 
+
+      <section>
         <canvas id="canvas" width="980" height="660">
           Canvas is not supported in your browser.
-        </canvas>  
+        </canvas>
       </section>
-      
-      <section> 
+
+      <section>
         <label for="turn">turn</label>
         <input type="text" id="turn" size="1"/>
         <label for="advance">steps</label>
-        <input type="text" id="advance" size="1"/>  
+        <input type="text" id="advance" size="1"/>
         <label for="repeat">repeat</label>
         <input type="text" id="repeat" size="1"/>
         <button id="move">Move</button>
-        <button id="random">Random</button>   
+        <button id="random">Random</button>
         <button id="start">Start</button>
-        &nbsp 
+        &nbsp
         <input type="text" id="leftTurn" size="1"/>
         <button id="left">Left</button>
         <input type="text" id="rightTurn" size="1"/>
         <button id="right">Right</button>
-        &nbsp 
-        <input type="text" id="backwardAdvance" size="2"/> 
+        &nbsp
+        <input type="text" id="backwardAdvance" size="2"/>
         <button id="backward">Backward</button>
-        <input type="text" id="forwardAdvance" size="1"/>  
-        <button id="forward">Forward</button> 
+        <input type="text" id="forwardAdvance" size="1"/>
+        <button id="forward">Forward</button>
       </section>
-      
+
       <section>
-	      <section> 
-	        <h4>Program  
+	      <section>
+	        <h4>Program
 	          <button id="show">Show</button>
 	          <button id="clear">Clear</button>
 	          <button id="draw">Draw</button>
 	        </h4>
 	        <textarea  class="left" name="commands" rows=48 cols=80 id="commands">
-	        </textarea>    
+	        </textarea>
 	      </section>
-	      
-	      <section class="right"> 
+
+	      <section class="right">
 	        <p>
-	          <span class="marker">Basic Commands</span> <br/><br/> 
+	          <span class="marker">Basic Commands</span> <br/><br/>
 	          color, black; <br/>
 	          // blue, brown, gray, green, orange, red, white, yellow <br/>
               width, 1; <br/>
@@ -141,7 +141,7 @@
               art, 1; <br/>
             </p>
             <p>
-	          <span class="marker">Shortcut Commands</span> <br/><br/> 
+	          <span class="marker">Shortcut Commands</span> <br/><br/>
               left, 45; <br/>
               right, 90; <br/>
               backward, 60; <br/>
@@ -163,37 +163,37 @@
             </p>
 	      </section>
       </section>
-      
+
       <section class="main">
         <p>
-	      <a class="button" 
+	      <a class="button"
 	        href="http://programmers.stackexchange.com/questions/163185/torvalds-quote-about-good-programmer">
 	        "Good programmers worry about data structures and their relationships."
 	      </a>
 	    </p>
         <p>
-          <span class="drop">The</span> Art.Pen app in 
+          <span class="drop">The</span> Art.Pen app in
           <a  href="http://www.dartlang.org/" class="link">
             Dart.
           </a>
         </p>
         <p>
-          <a href="#"><img src="img/art_pen.png"/></a> 
-          The model example is designed with 
+          <a href="#"><img src="img/art_pen.png"/></a>
+          The model example is designed with
           <a  href="https://github.com/dzenanr/magic_boxes" class="link">
-            Magic Boxes. 
+            Magic Boxes.
           </a>
-          The model code is generated by 
+          The model code is generated by
           <a  href="https://github.com/dzenanr/dartling" class="link">
-            Dartling. 
+            Dartling.
           </a>
           The app is one of examples in Dartling, which is maintained at
           <a  href="https://github.com/" class="link">
-            GitHub. 
+            GitHub.
           </a>
         </p>
-      </section>    
-      
+      </section>
+
       <footer class="main">
         <a class="button" href="http://ondart.me/">
 	      On Dart
@@ -208,11 +208,11 @@
 	      Start On Dart
 	    </a>
 	    -->
-      </footer> 
+      </footer>
     </section>
-    
+
     <script type="application/dart" src="d_art_pen.dart"></script>
-    <script 
+    <script
     src="http://dart.googlecode.com/svn/branches/bleeding_edge/dart/client/dart.js">
     </script>
   </body>
