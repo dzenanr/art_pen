@@ -9,16 +9,16 @@ import 'package:dartling/dartling_app.dart';
 import 'package:art_pen/art_pen.dart';
 import 'package:art_pen/art_pen_app.dart';
 
-showMinData(ArtRepo minRepo) {
-   var mainView = new View(document, "main");
-   mainView.repo = minRepo;
-   new RepoMainSection(mainView);
+showData(ArtRepo repo) {
+   var dataView = new View(document, "main");
+   dataView.repo = repo;
+   new RepoMainSection(dataView);
 }
 
 main() {
-  var minRepo = new ArtRepo();
-  showMinData(minRepo);
-  var board = new Board(minRepo);
+  var repo = new ArtRepo();
+  showData(repo);
+  var board = new Board(repo);
   new Commands(board.pen);
 }
 
