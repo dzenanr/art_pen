@@ -1937,4 +1937,32 @@ art, 4;
   pen.interpret(commands);
 }
 
+demo076(Pen pen) {
+  tri(num size) {
+    pen.forward(size);
+    pen.right(120);
+    pen.forward(size);
+    pen.right(120);
+    pen.forward(size);
+    pen.right(120);
+  }
+  pen.erase();
+  var max = 20;
+  for (var i = 0; i < max; i++) {
+    tri(max - i);
+    pen.right(i);
+    pen.forward(max - i);
+  }
+}
+
+demo077(Pen pen) {
+  pen.erase();
+  var max = 500;
+  for (var i = 0; i < max; i++) {
+    pen.down = false;
+    pen.moveToRandom();
+    pen.down = true;
+    pen.move(45, 2, 0);
+  }
+}
 

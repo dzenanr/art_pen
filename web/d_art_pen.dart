@@ -20,6 +20,8 @@ main() {
   showData(repo);
   var board = new Board(repo);
   new Commands(board.pen);
+  
+  //demo077(board.pen);
 }
 
 
