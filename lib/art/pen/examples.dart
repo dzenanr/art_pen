@@ -1900,7 +1900,41 @@ art, 4;
   pen.interpret(commands);
 }
 
+demo073(Pen pen) {
+  var commands = '''
+move, 0.0, 80.0, 0;
+move, 40.51556881696686, 10.961400098506424, 10;
+move, 0.0, 80.0, 0;
+move, 91.08354069982545, 17.734716674807217, 31;
+move, 0.0, 80.0, 0;
+move, -98.33436642768766, -61.06151233426077, 28;
+art, 4;
+  ''';
+  pen.erase();
+  pen.interpret(commands);
+}
 
+demo074(Pen pen) {
+  var commands = '''
+move, 177.0, 200.0, 11;
+art, 4;
+  ''';
+  pen.erase();
+  pen.interpret(commands);
+}
 
+demo075(Pen pen) {
+  var commands = '''
+color, red;
+move, 177.0, 200.0, 6;
+color, blue;
+move, 177.0, 200.0, 8;
+color, yellow;
+move, 177.0, 200.0, 6;
+art, 4;
+  ''';
+  pen.erase();
+  pen.interpret(commands);
+}
 
 
