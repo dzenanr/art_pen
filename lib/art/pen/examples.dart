@@ -1966,3 +1966,160 @@ demo077(Pen pen) {
   }
 }
 
+demo078(Pen pen) {
+  f1() {
+    for (var i in [1,2,3,4,5,6]) {
+      pen.forward(1);
+      pen.move(1, 1, 359);
+      pen.right(60);
+    } 
+  }
+  
+  f2() {
+    for (var i in [1,2,3,4,5,6]) {
+      pen.forward(1);
+      pen.move(1, 1, 359);
+      pen.down = false;
+      pen.forward(1);
+      pen.move(1, 1, 239);
+      pen.down = true;
+      pen.right(180);
+    } 
+  }
+  
+  f3() {
+    for (var i in [1,2,3,4,5,6]) {
+      pen.down = false;
+      pen.forward(1);
+      pen.move(1, 1, 239);
+      pen.down = true;
+      pen.right(120);
+      pen.forward(1);
+      pen.move(1, 1, 359);
+      pen.left(60);
+      pen.forward(1);
+      pen.move(1, 1, 359);    
+      pen.right(120);
+    } 
+  }
+  
+  f1();
+  pen.down = false;
+  pen.move(0, 100, 0);
+  pen.down = true;
+  f2();
+  f3();
+}
+
+demo079(Pen pen) {
+  f1() {
+    for (var i = 0; i < 6; i++) {
+      pen.go(1, angle: 1, repeat: 359);
+      pen.right(60);
+    } 
+  }
+  
+  f2() {
+    for (var i = 0; i < 6; i++) {
+      pen.go(1, angle: 1, repeat: 359);
+      pen.skip(1, angle: 1, repeat: 239);
+      pen.right(180);
+    } 
+  }
+  
+  f3() {
+    for (var i = 0; i < 6; i++) {
+      pen.skip(1, angle: 1, repeat: 239);
+      pen.right(120);
+      pen.go(1, angle:1, repeat:359);
+      pen.left(60);
+      pen.go(1, angle:1, repeat:359);
+      pen.right(120);
+    } 
+  }
+  
+  f1();
+  pen.skip(99);
+  f2();
+  f3();
+}
+
+demo080(Pen pen) {
+  f1() {
+    for (var i = 0; i < 4; i++) {
+      var j = 1;
+      pen.go(100, angle: 100 - j++, repeat: 99);
+    } 
+  }
+
+  for (var k = 0; k < 8; k++) {
+    pen.colorRandom();
+    f1();
+    pen.moveToRandom();
+  } 
+}
+
+demo081(Pen pen) {
+  zig(int level) {
+    pen.forward(level * 30);
+    var l = level - 1;
+    if (l > 0) {
+      pen.left(45);
+      for (var i = 0; i < 3; i++) {
+        pen.colorRandom();
+        zig(l);
+        pen.right(90);
+        pen.forward(level * i);
+      } 
+    }
+  }
+
+  zig(6);
+}
+
+demo082(Pen pen) {
+  square() {
+    pen.move(90, 100, 3); 
+  }
+
+  for (var k = 0; k < 52; k++) {
+    pen.colorRandom();
+    square();
+    pen.right(10);
+  } 
+}
+
+demo083(Pen pen) {
+  star() {
+    pen.go(100, angle: 252, repeat: 4);
+  }
+
+  pen.color = 'yellow';
+  for (var k = 0; k < 16; k++) {
+    star();
+    pen.right(20);
+  } 
+}
+
+demo084(Pen pen) {
+  var commands = '''
+move, 0.0, 80.0, 0;
+move, -159.51294924360272, 169.35555605108672, 12;
+  ''';
+  pen.erase();
+  pen.interpret(commands);
+}
+
+demo085(Pen pen) {
+  var commands = '''
+move, 0.0, 80.0, 0;
+move, -159.51294924360272, 169.35555605108672, 12;
+art, 5;
+  ''';
+  pen.erase();
+  pen.interpret(commands);
+}
+
+
+
+

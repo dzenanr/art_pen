@@ -141,7 +141,7 @@ class Pen {
     }
   }
 
-  move(num turn, [num advance = 0, int repeat = 0]) {
+  move(num turn, [num steps= 0, int repeat= 0]) {
     if (lastLine == null) {
       lastLine = new Line.first(lastSegment.lines.concept, startX, startY);
     } else {
@@ -149,7 +149,7 @@ class Pen {
     }
     lastLine.segment = lastSegment;
     lastLine.angle = turn;
-    lastLine.pixels = advance;
+    lastLine.pixels = steps;
     lastLine.backOnBorder(drawingWidth, drawingHeight);
     lastSegment.lines.add(lastLine);
 
@@ -159,12 +159,12 @@ class Pen {
             new Line.next(lastSegment.lines.concept, lastLine);
         lastLine.segment = lastSegment;
         lastLine.angle = turn;
-        lastLine.pixels = advance;
+        lastLine.pixels = steps;
         lastLine.backOnBorder(drawingWidth, drawingHeight);
         lastSegment.lines.add(lastLine);
       }
     }
-    commands.add(['move', turn, advance, repeat]);
+    commands.add(['move', turn, steps, repeat]);
   }
 
   art([int times = 1]) {
@@ -244,6 +244,24 @@ class Pen {
   backward(num steps) {
     if (steps > 0) {
       move(0, -steps);
+    }
+  }
+  
+  skip (num steps, {num angle: 0, int repeat: 0}) {
+    down = false;
+    var i = 0;
+    while (i++ < repeat + 1) {
+      move(0, steps);
+      move(angle, 0);
+    }
+    down = true;
+  }
+  
+  go (num steps, {num angle: 0, int repeat: 0}) {
+    var i = 0;
+    while (i++ < repeat + 1) {
+      move(0, steps);
+      move(angle, 0);
     }
   }
 

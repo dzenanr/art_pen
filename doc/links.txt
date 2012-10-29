@@ -25,6 +25,7 @@ http://code.google.com/p/google-blockly/
 
 Books
 
+http://www.eecs.berkeley.edu/~bh/v1-toc2.html
 http://www.cs.berkeley.edu/~bh/v1-toc2.html
 http://www.cs.berkeley.edu/~bh/pdf/v1ch10.pdf
 http://www.amazon.com/gp/product/0262510375
@@ -47,6 +48,10 @@ http://www.cse.chalmers.se/edu/course/afp/index.html
 http://www.stanford.edu/class/cs106a/
 http://www.cse.chalmers.se/~bengt/korea-course/
 https://sites.google.com/site/educ343543/mathematics/turtle-geometry
+
+Examples
+
+http://www.sonic.net/~nbs/webturtle/examples/
 
 Fractals
 
@@ -80,6 +85,7 @@ Logo
 
 http://www.bfoit.org/Intro_to_Programming/IntroCmds.html
 http://el.media.mit.edu/logo-foundation/logo/turtle.html
+http://www.derrel.net/exp/programs/logo_com.htm
 
 Math
 
@@ -93,6 +99,7 @@ http://www.regentsprep.org/regents/math/geometry/GCG2/Lmidpoint.htm
 People
 
 http://www.cs.berkeley.edu/~bh/
+http://www.eecs.berkeley.edu/~bh/
 
 Python
 
@@ -130,6 +137,7 @@ http://www.atarimagazines.com/compute/issue20/turtle_Education.php
 Tutorial
 
 http://el.media.mit.edu/logo-foundation/logo/turtle.html
+http://mckoss.com/logo/
 
 Videos
 
