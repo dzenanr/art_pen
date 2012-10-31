@@ -2120,6 +2120,220 @@ art, 5;
   pen.interpret(commands);
 }
 
+demo086(Pen pen) {
+  // http://blog.zacharyabel.com/tag/turtle-programs/
+  
+  var count = 11;
+  List seq(List sequence) {
+    var seq = new List.from(sequence);
+    for (var i in sequence) {
+      if (i == 1) {
+        seq.add(0);
+      } else if (i == 0) {
+        seq.add(1);
+      }
+    }
+    return seq;
+  }
 
+  var sequence = new List();
+  sequence.add(1);
+  var s = seq(sequence);
+  for (var j = 0; j < count; j++) {
+    s = seq(s);
+  }
+  
+  pen.down = false;
+  pen.moveTo(pen.drawingWidth, 0);
+  pen.down = true;
+  for (var k in s) {
+    if (k == 1) {
+      pen.forward(4);
+    } else if (k == 0) {
+      pen.left(60);
+    }
+  }
+}
 
+demo087(Pen pen) {
+  // http://blog.zacharyabel.com/tag/turtle-programs/
+  
+  var count = 11;
+  List seq(List sequence) {
+    var seq = new List.from(sequence);
+    for (var i in sequence) {
+      if (i == 1) {
+        seq.add(0);
+      } else if (i == 0) {
+        seq.add(1);
+      }
+    }
+    return seq;
+  }
+
+  var sequence = new List();
+  sequence.add(1);
+  var s = seq(sequence);
+  for (var j = 0; j < count; j++) {
+    s = seq(s);
+  }
+  
+  pen.down = false;
+  pen.moveTo(0, 0);
+  pen.down = true;
+  for (var k in s) {
+    if (k == 1) {
+      pen.forward(1);
+    } else if (k == 0) {
+      pen.left(120);
+    }
+  }
+}
+
+demo088(Pen pen) {
+  // http://blog.zacharyabel.com/tag/turtle-programs/
+  
+  var count = 10;
+  List seq(List sequence) {
+    var seq = new List.from(sequence);
+    for (var i in sequence) {
+      if (i == 1) {
+        seq.add(0);
+      } else if (i == 0) {
+        seq.add(1);
+      }
+    }
+    return seq;
+  }
+
+  var sequence = new List();
+  sequence.add(1);
+  var s = seq(sequence);
+  for (var j = 0; j < count; j++) {
+    s = seq(s);
+  }
+  
+  pen.down = false;
+  pen.moveTo(pen.drawingWidth, 0);
+  pen.down = true;
+  for (var k in s) {
+    if (k == 1) {
+      pen.left(180);
+      pen.forward(4);
+      
+    } else if (k == 0) {
+      pen.left(60);
+      pen.forward(4);
+    }
+  }
+}
+
+demo089(Pen pen) {
+  // http://blog.zacharyabel.com/tag/turtle-programs/
+  
+  var count = 10;
+  List seq(List sequence) {
+    var seq = new List.from(sequence);
+    for (var i in sequence) {
+      if (i == 1) {
+        seq.add(0);
+      } else if (i == 0) {
+        seq.add(1);
+      }
+    }
+    return seq;
+  }
+
+  var sequence = new List();
+  sequence.add(1);
+  var s = seq(sequence);
+  for (var j = 0; j < count; j++) {
+    s = seq(s);
+  }
+  
+  pen.down = false;
+  pen.moveTo(0, 0);
+  pen.down = true;
+  for (var k in s) {
+    if (k == 1) {
+      pen.left(180);
+      pen.forward(8);   
+    } else if (k == 0) {
+      pen.left(120);
+      pen.forward(8);
+    }
+  }
+}
+
+demo090(Pen pen) {
+  // http://blog.zacharyabel.com/tag/turtle-programs/
+  
+  var count = 10;
+  List seq(List sequence) {
+    var seq = new List.from(sequence);
+    for (var i in sequence) {
+      if (i == 1) {
+        seq.add(0);
+      } else if (i == 0) {
+        seq.add(1);
+      }
+    }
+    return seq;
+  }
+
+  var sequence = new List();
+  sequence.add(1);
+  var s = seq(sequence);
+  for (var j = 0; j < count; j++) {
+    s = seq(s);
+  }
+  
+  pen.down = false;
+  pen.moveTo(0, pen.drawingHeight);
+  pen.down = true;
+  for (var k in s) {
+    if (k == 1) {
+      pen.left(180);     
+    } else if (k == 0) {
+      pen.left(15);
+      pen.forward(10);
+    }
+  }
+}
+
+demo091(Pen pen) {
+  // http://blog.zacharyabel.com/tag/turtle-programs/
+  
+  var count = 10;
+  List seq(List sequence) {
+    var seq = new List.from(sequence);
+    for (var i in sequence) {
+      if (i == 1) {
+        seq.add(0);
+      } else if (i == 0) {
+        seq.add(1);
+      }
+    }
+    return seq;
+  }
+
+  var sequence = new List();
+  sequence.add(1);
+  var s = seq(sequence);
+  for (var j = 0; j < count; j++) {
+    s = seq(s);
+  }
+
+  pen.down = false;
+  pen.moveTo(0, pen.drawingHeight/2);
+  pen.down = true;
+  for (var k in s) {
+    if (k == 1) {
+      pen.forward(4);
+      pen.left(60);
+    } else if (k == 0) {
+      pen.left(180);
+    }
+  }
+}
 

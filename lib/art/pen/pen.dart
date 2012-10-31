@@ -127,18 +127,21 @@ class Pen {
   moveToStart() => moveTo(startX, startY);
 
   moveTo(num x, num y) {
-    if (lastLine != null) {
-      var previousLine = lastLine;
+    if (lastLine == null) {
+      lastLine = new Line.first(lastSegment.lines.concept, x, y);
+    } else {
       lastLine = new Line.next(lastSegment.lines.concept, lastLine);
-      lastLine.segment = lastSegment;
-      lastLine.beginX = previousLine.endX;
-      lastLine.beginY = previousLine.endY;
-      lastLine.endX = x;
-      lastLine.endY = y;
-      lastLine.backOnBorder(drawingWidth, drawingHeight);
-      lastSegment.lines.add(lastLine);
-      commands.add(['moveTo', x, y]);
     }
+    var previousLine = lastLine;
+    lastLine = new Line.next(lastSegment.lines.concept, lastLine);
+    lastLine.segment = lastSegment;
+    lastLine.beginX = previousLine.endX;
+    lastLine.beginY = previousLine.endY;
+    lastLine.endX = x;
+    lastLine.endY = y;
+    lastLine.backOnBorder(drawingWidth, drawingHeight);
+    lastSegment.lines.add(lastLine);
+    commands.add(['moveTo', x, y]);
   }
 
   move(num turn, [num steps= 0, int repeat= 0]) {
