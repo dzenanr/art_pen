@@ -15,23 +15,11 @@ showData(ArtRepo repo) {
    new RepoMainSection(dataView);
 }
 
-demo(Pen pen) {
-  // http://blog.zacharyabel.com/tag/turtle-programs/
-  //demo086(pen);
-  //demo087(pen);
-  //demo088(pen);
-  //demo089(pen);
-  //demo090(pen);
-  demo091(pen);
-}
-
 main() {
   var repo = new ArtRepo();
   showData(repo);
   var board = new Board(repo);
   new Commands(board.pen);
-  
-  //demo(board.pen);
 }
 
 

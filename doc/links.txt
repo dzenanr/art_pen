@@ -49,6 +49,11 @@ http://www.stanford.edu/class/cs106a/
 http://www.cse.chalmers.se/~bengt/korea-course/
 https://sites.google.com/site/educ343543/mathematics/turtle-geometry
 
+Editor
+
+http://editor.method.ac/
+http://mezzoblue.github.com/PaintbrushJS/demo/
+
 Examples
 
 http://www.sonic.net/~nbs/webturtle/examples/
@@ -91,6 +96,10 @@ Math
 
 http://www.math.sunysb.edu/~scott/Book331/
 http://demonstrations.wolfram.com/
+
+Math Tools
+
+http://www.malinc.se/math/
 
 Midpoint
 

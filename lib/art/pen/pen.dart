@@ -27,6 +27,7 @@ class Pen {
   Line lastLine;
 
   var commands;
+  var examples;
 
   Pen(ArtRepo artRepo) {
     var artModels =
@@ -50,6 +51,7 @@ class Pen {
     lastLine = null;
 
     commands = new List<List>();
+    examples = exampleList();
   }
 
   erase() {
@@ -288,6 +290,15 @@ class Pen {
   artRandom() {
     art(randomInt(randomMaxInt));
   }
+  
+  String randomDemoName() {
+    var seq = randomInt(91);
+    var name;
+    if (seq < 10) name = 'demo00${seq.toString()}';
+    else if (seq < 100) name = 'demo0${seq.toString()}';
+    else if (seq < 1000) name = 'demo${seq.toString()}';
+    return name;
+  }
 
   String fromCommands() {
     String result = '';
@@ -409,5 +420,13 @@ class Pen {
       print('error in interpretation of commands -- $e');
     }
   }
-
+  
+  example(int seq) {
+    if (seq < examples.length) {
+      var commands = examples[seq];
+      erase();
+      interpret(commands);
+    }
+  }
+  
 }
