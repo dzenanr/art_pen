@@ -483,9 +483,9 @@ demo11(Pen pen) {
     for (var i = 0; i < 6; i++) {
       pen.skip(1, angle: 1, repeat: 239);
       pen.right(120);
-      pen.go(1, angle:1, repeat:359);
+      pen.go(1, angle: 1, repeat: 359);
       pen.left(60);
-      pen.go(1, angle:1, repeat:359);
+      pen.go(1, angle: 1, repeat: 359);
       pen.right(120);
     } 
   }

@@ -228,13 +228,13 @@ class Pen {
     }
   }
 
-  right (num angle) {
+  right(num angle) {
     if (angle > 0) {
       move(angle);
     }
   }
 
-  left (num angle) {
+  left(num angle) {
     if (angle > 0) {
       move(-angle);
     }
@@ -252,7 +252,15 @@ class Pen {
     }
   }
   
-  skip (num steps, {num angle: 0, int repeat: 0}) {
+  go(num steps, {num angle: 0, int repeat: 0}) {
+    var i = 0;
+    while (i++ < repeat + 1) {
+      move(0, steps);
+      move(angle, 0);
+    }
+  }
+  
+  skip(num steps, {num angle: 0, int repeat: 0}) {
     down = false;
     var i = 0;
     while (i++ < repeat + 1) {
@@ -260,14 +268,6 @@ class Pen {
       move(angle, 0);
     }
     down = true;
-  }
-  
-  go (num steps, {num angle: 0, int repeat: 0}) {
-    var i = 0;
-    while (i++ < repeat + 1) {
-      move(0, steps);
-      move(angle, 0);
-    }
   }
 
   colorRandom() => color = randomListElement(colorList());
@@ -290,6 +290,16 @@ class Pen {
   artRandom() {
     art(randomInt(randomMaxInt));
   }
+  
+  goRandom() =>
+      go(randomSign(randomMaxInt) * randomDouble(randomStepsMax),
+          angle: randomSign(randomMaxInt) * randomDouble(randomAngleMax),
+          repeat: randomInt(randomRepeatMax));
+  
+  skipRandom() =>
+      skip(randomSign(randomMaxInt) * randomDouble(randomStepsMax),
+          angle: randomSign(randomMaxInt) * randomDouble(randomAngleMax),
+          repeat: randomInt(randomRepeatMax));
   
   String randomDemoName() {
     var seq = randomInt(91);
@@ -382,6 +392,32 @@ class Pen {
               break;
             case 'moveRandom':
               moveRandom();
+              break;
+            case 'go':
+              if (command.length == 2) {
+                go(double.parse(command[1]));
+              } else if (command.length == 3) {
+                go(double.parse(command[1]), angle: double.parse(command[2]));
+              } else if (command.length == 4) {
+                go(double.parse(command[1]), angle: double.parse(command[2]),
+                  repeat: int.parse(command[3]));
+              }
+              break;
+            case 'goRandom':
+              goRandom();
+              break;
+            case 'skip':
+              if (command.length == 2) {
+                skip(double.parse(command[1]));
+              } else if (command.length == 3) {
+                skip(double.parse(command[1]), angle: double.parse(command[2]));
+              } else if (command.length == 4) {
+                skip(double.parse(command[1]), angle: double.parse(command[2]),
+                  repeat: int.parse(command[3]));
+              }
+              break;
+            case 'skipRandom':
+              skipRandom();
               break;
             case 'left':
               left(double.parse(command[1]));
