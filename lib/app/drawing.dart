@@ -114,7 +114,7 @@ class Board {
     programSelect.on.change.add((Event e) {
       try {
         if (programSelect.value == 'random example') {
-          randomExample(pen, int.parse(artCountInput.value));
+          randomExample(pen, artCount:int.parse(artCountInput.value));
         } else {
           demo(pen, int.parse(programSelect.value));
         }
