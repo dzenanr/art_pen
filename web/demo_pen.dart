@@ -9,7 +9,7 @@ import 'package:art_pen/art_pen_app.dart';
 main() {
   final repo = new ArtRepo();
   final board = new Board(repo);
-  
+
   var pen = board.pen;
   pen.example(randomInt(pen.examples.length - 1));
 }

@@ -196,14 +196,14 @@ class Pen {
           copiedLine.segment = copiedSegment;
           bool addedCopiedLine = copiedSegment.lines.add(copiedLine);
           if(!addedCopiedLine) {
-            copiedSegment.lines.errors.display(
+            copiedSegment.lines.errors.display(title:
                 'Error: copiedSegment.lines.add(copiedLine);');
           }
           assert(addedCopiedLine);
         }
         bool addedCopiedSegment = copiedSegments.add(copiedSegment);
         if(!addedCopiedSegment) {
-          copiedSegment.lines.errors.display(
+          copiedSegment.lines.errors.display(title:
               'Error: copiedSegments.add(copiedSegment);');
         }
         assert(addedCopiedSegment);
@@ -219,7 +219,7 @@ class Pen {
         }
         bool addedSegment = segments.add(copiedSegment);
         if(!addedSegment) {
-          copiedSegment.lines.errors.display(
+          copiedSegment.lines.errors.display(title:
               'Error: segments.add(copiedSegment);');
         }
         assert(addedSegment);
@@ -251,7 +251,7 @@ class Pen {
       move(0, -steps);
     }
   }
-  
+
   go(num steps, {num angle: 0, int repeat: 0}) {
     var i = 0;
     while (i++ < repeat + 1) {
@@ -259,7 +259,7 @@ class Pen {
       move(angle, 0);
     }
   }
-  
+
   skip(num steps, {num angle: 0, int repeat: 0}) {
     down = false;
     var i = 0;
@@ -290,23 +290,23 @@ class Pen {
   artRandom() {
     art(randomInt(randomMaxInt));
   }
-  
+
   goRandom() =>
       go(randomSign(randomMaxInt) * randomDouble(randomStepsMax),
           angle: randomSign(randomMaxInt) * randomDouble(randomAngleMax),
           repeat: randomInt(randomRepeatMax));
-  
+
   skipRandom() =>
       skip(randomSign(randomMaxInt) * randomDouble(randomStepsMax),
           angle: randomSign(randomMaxInt) * randomDouble(randomAngleMax),
           repeat: randomInt(randomRepeatMax));
-  
+
   String randomDemoName() {
     var seq = randomInt(91);
     var name;
-    if (seq < 10) name = 'demo00${seq.toString()}';
-    else if (seq < 100) name = 'demo0${seq.toString()}';
-    else if (seq < 1000) name = 'demo${seq.toString()}';
+    if (seq < 10) { name = 'demo00${seq.toString()}';
+    } else if (seq < 100) { name = 'demo0${seq.toString()}';
+    } else if (seq < 1000) name = 'demo${seq.toString()}';
     return name;
   }
 
@@ -456,7 +456,7 @@ class Pen {
       print('error in interpretation of commands -- $e');
     }
   }
-  
+
   example(int seq) {
     if (seq < examples.length) {
       var commands = examples[seq];
@@ -464,5 +464,5 @@ class Pen {
       interpret(commands);
     }
   }
-  
+
 }

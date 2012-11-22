@@ -108,7 +108,7 @@ randomProgram(Pen pen, [int artCount = 4, int commandsCount = 32]) {
   pen.interpret(program);
 }
 
-randomExample(Pen pen, [int artCount = 4]) {
+randomExample(Pen pen, {int artCount: 4}) {
   var commands =
     'colorRandom; '
     'widthRandom; '
@@ -423,9 +423,9 @@ demo11a(Pen pen) {
       pen.forward(1);
       pen.move(1, 1, 359);
       pen.right(60);
-    } 
+    }
   }
-  
+
   f2() {
     for (var i in [1,2,3,4,5,6]) {
       pen.forward(1);
@@ -435,9 +435,9 @@ demo11a(Pen pen) {
       pen.move(1, 1, 239);
       pen.down = true;
       pen.right(180);
-    } 
+    }
   }
-  
+
   f3() {
     for (var i in [1,2,3,4,5,6]) {
       pen.down = false;
@@ -449,11 +449,11 @@ demo11a(Pen pen) {
       pen.move(1, 1, 359);
       pen.left(60);
       pen.forward(1);
-      pen.move(1, 1, 359);    
+      pen.move(1, 1, 359);
       pen.right(120);
-    } 
+    }
   }
-  
+
   pen.erase();
   f1();
   pen.down = false;
@@ -468,17 +468,17 @@ demo11(Pen pen) {
     for (var i = 0; i < 6; i++) {
       pen.go(1, angle: 1, repeat: 359);
       pen.right(60);
-    } 
+    }
   }
-  
+
   f2() {
     for (var i = 0; i < 6; i++) {
       pen.go(1, angle: 1, repeat: 359);
       pen.skip(1, angle: 1, repeat: 239);
       pen.right(180);
-    } 
+    }
   }
-  
+
   f3() {
     for (var i = 0; i < 6; i++) {
       pen.skip(1, angle: 1, repeat: 239);
@@ -487,9 +487,9 @@ demo11(Pen pen) {
       pen.left(60);
       pen.go(1, angle: 1, repeat: 359);
       pen.right(120);
-    } 
+    }
   }
-  
+
   pen.erase();
   f1();
   pen.skip(99);
@@ -502,7 +502,7 @@ demo12(Pen pen) {
     for (var i = 0; i < 4; i++) {
       var j = 1;
       pen.go(100, angle: 100 - j++, repeat: 99);
-    } 
+    }
   }
 
   pen.erase();
@@ -510,7 +510,7 @@ demo12(Pen pen) {
     pen.colorRandom();
     f1();
     pen.moveToRandom();
-  } 
+  }
 }
 
 demo13(Pen pen) {
@@ -524,7 +524,7 @@ demo13(Pen pen) {
         zig(l);
         pen.right(90);
         pen.forward(level * i);
-      } 
+      }
     }
   }
 
@@ -534,7 +534,7 @@ demo13(Pen pen) {
 
 demo14(Pen pen) {
   square() {
-    pen.move(90, 100, 3); 
+    pen.move(90, 100, 3);
   }
 
   pen.erase();
@@ -542,7 +542,7 @@ demo14(Pen pen) {
     pen.colorRandom();
     square();
     pen.right(10);
-  } 
+  }
 }
 
 demo15(Pen pen) {
@@ -555,7 +555,7 @@ demo15(Pen pen) {
   for (var k = 0; k < 18; k++) {
     star();
     pen.right(20);
-  } 
+  }
 }
 
 demo16(Pen pen) {
@@ -574,7 +574,7 @@ demo16(Pen pen) {
 }
 
 demo17(Pen pen) {
-  var s = sequence(11); 
+  var s = sequence(11);
   pen.erase();
   pen.down = false;
   pen.moveTo(0, 0);
@@ -589,7 +589,7 @@ demo17(Pen pen) {
 }
 
 demo18(Pen pen) {
-  var s = sequence(10);  
+  var s = sequence(10);
   pen.erase();
   pen.down = false;
   pen.moveTo(pen.drawingWidth, 0);
@@ -598,7 +598,7 @@ demo18(Pen pen) {
     if (k == 1) {
       pen.left(180);
       pen.forward(4);
-      
+
     } else if (k == 0) {
       pen.left(60);
       pen.forward(4);
@@ -615,7 +615,7 @@ demo19(Pen pen) {
   for (var k in s) {
     if (k == 1) {
       pen.left(180);
-      pen.forward(8);   
+      pen.forward(8);
     } else if (k == 0) {
       pen.left(120);
       pen.forward(8);
@@ -631,7 +631,7 @@ demo20(Pen pen) {
   pen.down = true;
   for (var k in s) {
     if (k == 1) {
-      pen.left(180);     
+      pen.left(180);
     } else if (k == 0) {
       pen.left(15);
       pen.forward(10);

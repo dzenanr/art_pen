@@ -104,7 +104,7 @@ class Board {
       pen.erase();
       _init();
     });
-    
+
     exampleButton = document.query('#example');
     exampleButton.on.click.add((MouseEvent e) {
       pen.example(randomInt(pen.examples.length - 1));

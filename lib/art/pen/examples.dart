@@ -12,7 +12,7 @@ List<String> exampleList() {
   examples.add(example007());
   examples.add(example008());
   examples.add(example009());
-  
+
   examples.add(example010());
   examples.add(example011());
   examples.add(example012());
@@ -23,7 +23,7 @@ List<String> exampleList() {
   examples.add(example017());
   examples.add(example018());
   examples.add(example019());
-  
+
   examples.add(example020());
   examples.add(example021());
   examples.add(example022());
@@ -34,7 +34,7 @@ List<String> exampleList() {
   examples.add(example027());
   examples.add(example028());
   examples.add(example029());
-  
+
   examples.add(example030());
   examples.add(example031());
   examples.add(example032());
@@ -45,7 +45,7 @@ List<String> exampleList() {
   examples.add(example037());
   examples.add(example038());
   examples.add(example039());
-  
+
   examples.add(example040());
   examples.add(example041());
   examples.add(example042());
@@ -56,7 +56,7 @@ List<String> exampleList() {
   examples.add(example047());
   examples.add(example048());
   examples.add(example049());
-  
+
   examples.add(example050());
   examples.add(example051());
   examples.add(example052());
@@ -67,7 +67,7 @@ List<String> exampleList() {
   examples.add(example057());
   examples.add(example058());
   examples.add(example059());
-  
+
   examples.add(example060());
   examples.add(example061());
   examples.add(example062());
@@ -78,7 +78,7 @@ List<String> exampleList() {
   examples.add(example067());
   examples.add(example068());
   examples.add(example069());
-  
+
   examples.add(example070());
   examples.add(example071());
   examples.add(example072());
@@ -89,10 +89,14 @@ List<String> exampleList() {
   examples.add(example077());
   examples.add(example078());
   examples.add(example079());
-  
+
   examples.add(example080());
   examples.add(example081());
-  
+  examples.add(example082());
+  examples.add(example083());
+  examples.add(example084());
+  examples.add(example085());
+
   return examples;
 }
 
@@ -758,7 +762,7 @@ width, 2;
 move, 47.82625844795445, 4.96132713570081, 35;
 move, 75.79232306604537, 97.57339554518123, 29;
 art, 6;
-  '''; 
+  ''';
 }
 
 String example026() {
@@ -849,7 +853,7 @@ width, 2;
 move, 87.63210364292274, -37.65561491633479, 10;
 moveTo, 360.0, 333.0;
 art, 5;
-  '''; 
+  ''';
 }
 
 String example031() {
@@ -1893,4 +1897,66 @@ move, -159.51294924360272, 169.35555605108672, 12;
 art, 5;
   ''';
 }
+
+String example082() {
+  return '''
+move, 0.0, 80.0, 0;
+move, 282.84001466243706, 56.69130837033068, 30;
+move, 0.0, 80.0, 0;
+move, 82.23726545470528, 124.66701248548281, 0;
+move, 0.0, 80.0, 0;
+move, 291.6101313193811, 177.43575944702178, 26;
+art, 4;
+  ''';
+}
+
+String example083() {
+  return '''
+move, 0.0, 80.0, 0;
+move, 98.61138704536503, 94.57616948043865, 21;
+move, 0.0, 80.0, 0;
+move, 89.10089751608588, 20.383092494169997, 7;
+move, 0.0, 80.0, 0;
+move, 22.09524576124543, 32.681795017805584, 22;
+move, 0.0, 80.0, 0;
+move, 37.19047374249094, 70.12660154026314, 22;
+art, 5;
+  ''';
+}
+
+String example084() {
+  return '''
+color, gray;
+move, 0.0, 80.0, 0;
+move, -43.85352254284314, 99.0753630505637, 7;
+move, 0.0, 80.0, 0;
+move, 0.0, 80.0, 0;
+move, 73.07631631614746, 62.941691553135925, 10;
+move, 0.0, 80.0, 0;
+move, 0.0, 80.0, 0;
+move, 20.429350125489666, 89.3724280647821, 2;
+moveTo, 490.0, 330.0;
+move, -40.16068632788444, 54.88463698422675, 16;
+move, 0.0, 80.0, 0;
+move, 43.89420243924446, 80.62549763826463, 10;
+move, 0.0, 80.0, 0;
+move, 44.902152133135864, -22.76091333715997, 23;
+art, 4;
+  ''';
+}
+
+String example085() {
+  return '''
+move, 0.0, 80.0, 0;
+move, -113.6016549372911, 33.15919818661566, 16;
+move, 0.0, 80.0, 0;
+move, 324.03546230714954, 152.58981256707244, 17;
+move, 0.0, 80.0, 0;
+move, 196.15113236200872, 37.80736212882741, 12;
+art, 7;
+  ''';
+}
+
+
+
 
