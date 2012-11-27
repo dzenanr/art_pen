@@ -96,6 +96,7 @@ List<String> exampleList() {
   examples.add(example083());
   examples.add(example084());
   examples.add(example085());
+  examples.add(example086());
 
   return examples;
 }
@@ -1956,6 +1957,16 @@ move, 196.15113236200872, 37.80736212882741, 12;
 art, 7;
   ''';
 }
+
+String example086() {
+  return '''
+move, 0.0, 80.0, 0;
+move, 321.2813291300157, 56.25525623059995, 6;
+art, 7;
+  ''';
+}
+
+
 
 
 
