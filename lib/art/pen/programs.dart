@@ -208,6 +208,7 @@ demo(Pen pen, int demo) {
       break;
     default:
       randomExample(pen);
+      break;
   }
 }
 
