@@ -64,7 +64,7 @@ class Pen {
 
   set color(String color) {
     _color = color;
-    if (!lastSegment.lines.empty) {
+    if (!lastSegment.lines.isEmpty) {
       lastSegment = new Segment(segments.concept);
       segments.add(lastSegment);
     }
@@ -83,7 +83,7 @@ class Pen {
     } else {
       _width = width;
     }
-    if (!lastSegment.lines.empty) {
+    if (!lastSegment.lines.isEmpty) {
       lastSegment = new Segment(segments.concept);
       segments.add(lastSegment);
     }
@@ -98,7 +98,7 @@ class Pen {
 
   set down(bool down) {
     _down = down;
-    if (!lastSegment.lines.empty) {
+    if (!lastSegment.lines.isEmpty) {
       lastSegment = new Segment(segments.concept);
       segments.add(lastSegment);
     }
@@ -113,7 +113,7 @@ class Pen {
 
   void set write(String write) {
     _write = write;
-    if (!lastSegment.lines.empty) {
+    if (!lastSegment.lines.isEmpty) {
       lastSegment = new Segment(segments.concept);
       segments.add(lastSegment);
     }
