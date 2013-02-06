@@ -50,12 +50,12 @@ class Board {
     colors = colorMap();
     // above drawing
     colorSelect = document.query('#color');
-    colorSelect.on.change.add((Event e) {
+    colorSelect.onChange.listen((Event e) {
       pen.color = colorSelect.value;
     });
 
     widthSelect = document.query('#width');
-    widthSelect.on.change.add((Event e) {
+    widthSelect.onChange.listen((Event e) {
       try {
         pen.width = int.parse(widthSelect.value);
       } on FormatException catch(error) {
@@ -64,23 +64,23 @@ class Board {
     });
 
     downCheckbox = document.query('#down');
-    downCheckbox.on.change.add((Event e) {
+    downCheckbox.onChange.listen((Event e) {
       pen.down = downCheckbox.checked;
     });
 
     writeInput = document.query('#write');
-    writeInput.on.change.add((Event e) {
+    writeInput.onChange.listen((Event e) {
       pen.write = writeInput.value;
     });
 
     visibleCheckbox = document.query('#visible');
-    visibleCheckbox.on.change.add((Event e) {
+    visibleCheckbox.onChange.listen((Event e) {
       pen.visible = visibleCheckbox.checked;
     });
 
     artCountInput = document.query('#artCount');
     artButton = document.query('#art');
-    artButton.on.click.add((MouseEvent e) {
+    artButton.onClick.listen((MouseEvent e) {
       try {
         pen.art(int.parse(artCountInput.value));
       } on FormatException catch(error) {
@@ -90,7 +90,7 @@ class Board {
 
     onDartCountInput = document.query('#onDartCount');
     onDartButton = document.query('#onDart');
-    onDartButton.on.click.add((MouseEvent e) {
+    onDartButton.onClick.listen((MouseEvent e) {
       try {
         randomProgram(pen,
             int.parse(artCountInput.value), int.parse(onDartCountInput.value));
@@ -100,18 +100,18 @@ class Board {
     });
 
     eraseButton = document.query('#erase');
-    eraseButton.on.click.add((MouseEvent e) {
+    eraseButton.onClick.listen((MouseEvent e) {
       pen.erase();
       _init();
     });
 
     exampleButton = document.query('#example');
-    exampleButton.on.click.add((MouseEvent e) {
+    exampleButton.onClick.listen((MouseEvent e) {
       pen.example(randomInt(pen.examples.length - 1));
     });
 
     programSelect = document.query('#program');
-    programSelect.on.change.add((Event e) {
+    programSelect.onChange.listen((Event e) {
       try {
         if (programSelect.value == 'random example') {
           randomExample(pen, artCount:int.parse(artCountInput.value));
@@ -137,7 +137,7 @@ class Board {
     repeatInput = document.query('#repeat');
 
     moveButton = document.query('#move');
-    moveButton.on.click.add((MouseEvent e) {
+    moveButton.onClick.listen((MouseEvent e) {
       try {
         num turn = double.parse(turnInput.value);
         num advance = double.parse(advanceInput.value);
@@ -149,18 +149,18 @@ class Board {
     });
 
     randomButton = document.query('#random');
-    randomButton.on.click.add((MouseEvent e) {
+    randomButton.onClick.listen((MouseEvent e) {
       pen.moveRandom();
     });
 
     startButton = document.query('#start');
-    startButton.on.click.add((MouseEvent e) {
+    startButton.onClick.listen((MouseEvent e) {
       pen.moveTo(pen.startX, pen.startY);
     });
 
     leftInput = document.query('#leftTurn');
     leftButton = document.query('#left');
-    leftButton.on.click.add((MouseEvent e) {
+    leftButton.onClick.listen((MouseEvent e) {
       try {
         // num value = leftInput.valueAsNumber; // ??
         pen.left(double.parse(leftInput.value));
@@ -171,7 +171,7 @@ class Board {
 
     rightInput = document.query('#rightTurn');
     rightButton = document.query('#right');
-    rightButton.on.click.add((MouseEvent e) {
+    rightButton.onClick.listen((MouseEvent e) {
       try {
         pen.right(double.parse(rightInput.value));
       } on FormatException catch(error) {
@@ -181,7 +181,7 @@ class Board {
 
     backwardInput = document.query('#backwardAdvance');
     backwardButton = document.query('#backward');
-    backwardButton.on.click.add((MouseEvent e) {
+    backwardButton.onClick.listen((MouseEvent e) {
       try {
         pen.backward(double.parse(backwardInput.value));
       } on FormatException catch(error) {
@@ -191,7 +191,7 @@ class Board {
 
     forwardInput = document.query('#forwardAdvance');
     forwardButton = document.query('#forward');
-    forwardButton.on.click.add((MouseEvent e) {
+    forwardButton.onClick.listen((MouseEvent e) {
       try {
         pen.forward(double.parse(forwardInput.value));
       } on FormatException catch(error) {
