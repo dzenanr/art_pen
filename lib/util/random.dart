@@ -5,7 +5,8 @@ double randomDouble(double max) {
   return randomDouble > max ? max : randomDouble;
 }
 
-int randomInt(int max) => new Random().nextInt(max);
+// imported from dartling
+//int randomInt(int max) => new Random().nextInt(max);
 
 randomListElement(List list) => list[randomInt(list.length - 1)];
 

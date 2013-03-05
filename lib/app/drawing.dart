@@ -2,7 +2,7 @@ part of art_pen_app;
 
 class Board {
 
-  static final int interval = 10; // in ms; redraw every interval
+  static const int interval = 10; // in ms; redraw every interval
   static final int artCount = 4;  // how many times segments are doubled
   static final num leftAngle = 22.5;
   static final num righttAngle = 45;
@@ -202,7 +202,7 @@ class Board {
     _init();
 
     // Redraw every interval ms.
-    new Timer.repeating(interval, (t) => draw());
+    new Timer.repeating(const Duration(milliseconds: interval), (t) => draw());
   }
 
   _init() {
