@@ -202,7 +202,7 @@ class Board {
     _init();
 
     // Redraw every interval ms.
-    new Timer.repeating(const Duration(milliseconds: interval), (t) => draw());
+    new Timer.periodic(const Duration(milliseconds: interval), (t) => draw());
   }
 
   _init() {
