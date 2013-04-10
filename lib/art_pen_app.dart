@@ -38,7 +38,6 @@ import 'dart:async';
 import 'dart:math';
 
 import 'package:dartling/dartling.dart';
-import 'package:dartling/dartling_app.dart';
 
 import 'package:art_pen/art_pen.dart';
 
