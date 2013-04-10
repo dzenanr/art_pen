@@ -1,7 +1,7 @@
 name: art_pen
 version: 0.1.0
 author: Dzenan Ridjanovic <dzenanr@gmail.com>
-description: DArt Pen is a version of the Logo language. Dartling is a domain model framework for web applications.
+description: DArt Pen is a version of the Logo language. dartling is a domain model framework for web applications.
 homepage: http://ondart.me/
 dependencies:
   dartling_default_app:
