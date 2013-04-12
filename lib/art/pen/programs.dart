@@ -345,7 +345,7 @@ demo6(Pen pen) {
   var size = 60;
   for (var i in new List(16)) {
     multicolorSquare(size);
-    size = size + 10;         // Increase the size for next time
+    size = size + 10;         // increase the size for next time
     pen.forward(10);
     pen.right(18);
   }
