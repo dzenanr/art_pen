@@ -8,6 +8,7 @@ for children, to learn basic programming concepts by drawing.
 
 Dependent on [dartling] (https://github.com/dzenanr/dartling). 
 After cloning it, open the project in Dart Editor with Pub.
+Run d_art_pen.html in Dartium or as JavaScript.
 
 For 
 [programming art] (http://urbanape.com/blog/2013/02/19/dunno-if-its-art-but-i-like-it/) 
