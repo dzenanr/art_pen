@@ -9,7 +9,7 @@ class ArtModels extends DomainModels {
   }
 
   PenEntries fromJsonToPenEntries() {
-    return new PenEntries(fromMagicBoxes(
+    return new PenEntries(fromJsonToModel(
       artPenModelJson,
       domain,
       ArtRepo.artPenModelCode));

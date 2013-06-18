@@ -43,6 +43,8 @@ var artPenModelJson = r'''
                "category":"required",
                "name":"visible",
                "type":"bool",
+               "essential":false,
+               "sensitive":false,
                "init":"true"
             },
             {
@@ -50,6 +52,8 @@ var artPenModelJson = r'''
                "category":"required",
                "name":"color",
                "type":"String",
+               "essential":true,
+               "sensitive":false,
                "init":"black"
             },
             {
@@ -57,6 +61,8 @@ var artPenModelJson = r'''
                "category":"required",
                "name":"width",
                "type":"int",
+               "essential":true,
+               "sensitive":false,
                "init":"1"
             }
          ]
@@ -74,6 +80,8 @@ var artPenModelJson = r'''
                "category":"required",
                "name":"beginX",
                "type":"num",
+               "essential":true,
+               "sensitive":false,
                "init":""
             },
             {
@@ -81,6 +89,8 @@ var artPenModelJson = r'''
                "category":"required",
                "name":"beginY",
                "type":"num",
+               "essential":true,
+               "sensitive":false,
                "init":""
             },
             {
@@ -88,6 +98,8 @@ var artPenModelJson = r'''
                "category":"required",
                "name":"endX",
                "type":"num",
+               "essential":true,
+               "sensitive":false,
                "init":""
             },
             {
@@ -95,6 +107,8 @@ var artPenModelJson = r'''
                "category":"required",
                "name":"endY",
                "type":"num",
+               "essential":true,
+               "sensitive":false,
                "init":""
             },
             {
@@ -102,6 +116,8 @@ var artPenModelJson = r'''
                "category":"required",
                "name":"cumulativeAngle",
                "type":"num",
+               "essential":false,
+               "sensitive":false,
                "init":"0"
             },
             {
@@ -109,6 +125,8 @@ var artPenModelJson = r'''
                "category":"required",
                "name":"angle",
                "type":"num",
+               "essential":false,
+               "sensitive":false,
                "init":"0"
             },
             {
@@ -116,6 +134,8 @@ var artPenModelJson = r'''
                "category":"required",
                "name":"pixels",
                "type":"num",
+               "essential":false,
+               "sensitive":false,
                "init":"80"
             }
          ]

@@ -45,7 +45,7 @@ genCode() {
   // change Skeleton to YourModelName
   // change "Skeleton" to "YourModelName"
   Model artPenModel =
-      fromMagicBoxes(artPenModelJson, artDomain, "Pen");
+      fromJsonToModel(artPenModelJson, artDomain, "Pen");
 
   repo.domains.add(artDomain);
 
