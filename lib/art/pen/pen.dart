@@ -34,7 +34,7 @@ class Pen {
         artRepo.getDomainModels(ArtRepo.artDomainCode);
     penEntries = artModels.getModelEntries(ArtRepo.artPenModelCode);
     segments = penEntries.getEntry('Segment');
-    lineConcept = penEntries.model.getConcept("Line");
+    lineConcept = penEntries.model.getConcept('Line');
     _init();
   }
 
