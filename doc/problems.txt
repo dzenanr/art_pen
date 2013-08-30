@@ -1,0 +1,20 @@
+JavaScript Version
+
+--- 2013-08-30 12:52:14 Compiling /art_pen/web/d_art_pen.dart... ---
+find: `>     bin [': No such file or directory
+../../git/dart/game/art_pen/web/packages/dartling/domain/model/entity.dart:547:17: Hint: The class "ConceptEntity" overrides "operator==", but not "get hashCode".
+  bool operator ==(Object other) {
+
+                ^^
+../../git/dart/game/art_pen/web/packages/dartling/domain/model/oid.dart:45:17: Hint: The class "Oid" overrides "operator==", but not "get hashCode".
+  bool operator ==(Object other) {
+
+                ^^
+../../git/dart/game/art_pen/web/packages/dartling/domain/model/id.dart:109:18: Hint: The class "Id" overrides "operator==", but not "get hashCode".
+   bool operator ==(Object other) {
+
+                 ^^
+
+--------------------------------------------
+
+Example button does not draw properly (only in JavaScript version).
