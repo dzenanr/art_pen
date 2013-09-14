@@ -80,6 +80,13 @@ Java
 http://www.bfoit.org/itp/IntroCmds.html
 http://www.java-online.ch/lego/legoEnglish/turtleGrafik.php?inhalt_links=turtle/nav_turtleTu.inc.php&inhalt_mitte=home/turtle.inc.php
 
+Kids
+
+https://medium.com/p/a2dc04ea9529
+http://csunplugged.org/
+http://www.kickstarter.com/projects/danshapiro/robot-turtles-the-board-game-for-little-programmer
+http://codehs.com/
+
 Languages
 
 http://en.wikipedia.org/wiki/Logo_(programming_language)
@@ -137,11 +144,13 @@ http://teachout1.net/village/java/tree3.html
 
 Turtle Programs
 
+http://turtleacademy.com/
 http://www.sonic.net/~nbs/webturtle/
 http://www.sonic.net/~nbs/webturtle/examples/
 http://faculty.nps.edu/ncrowe/curve2.htm
 http://openbookproject.net/thinkcs/python/english3e/recursion.html
 http://www.atarimagazines.com/compute/issue20/turtle_Education.php
+http://www.kickstarter.com/projects/danshapiro/robot-turtles-the-board-game-for-little-programmer
 
 Tutorial
 
