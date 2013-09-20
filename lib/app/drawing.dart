@@ -1,7 +1,6 @@
 part of art_pen_app;
 
 class Board {
-
   static const int interval = 10; // in ms; redraw every interval
   static final int artCount = 4;  // how many times segments are doubled
   static final num leftAngle = 22.5;
@@ -201,8 +200,13 @@ class Board {
 
     _init();
 
-    // Redraw every interval ms.
-    new Timer.periodic(const Duration(milliseconds: interval), (t) => draw());
+    // redraw
+    window.animationFrame.then(gameLoop);
+  }
+
+  gameLoop(num delta) {
+    draw();
+    window.animationFrame.then(gameLoop);
   }
 
   _init() {
