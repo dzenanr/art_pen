@@ -10,24 +10,24 @@ class Commands {
   TextAreaElement commandsTextArea;
 
   Commands(this.pen) {
-    showButton = document.query('#show');
+    showButton = document.querySelector('#show');
     showButton.onClick.listen((MouseEvent e) {
       clear();
       commandsTextArea.value = pen.fromCommands();
       commandsTextArea.select();
     });
 
-    clearButton = document.query('#clear');
+    clearButton = document.querySelector('#clear');
     clearButton.onClick.listen((MouseEvent e) {
       clear();
     });
 
-    drawButton = document.query('#draw');
+    drawButton = document.querySelector('#draw');
     drawButton.onClick.listen((MouseEvent e) {
       pen.interpret(commandsTextArea.value);
     });
 
-    commandsTextArea = document.query('#commands');
+    commandsTextArea = document.querySelector('#commands');
   }
 
   clear() => commandsTextArea.value = '';

@@ -48,12 +48,12 @@ class Board {
 
     colors = colorMap();
     // above drawing
-    colorSelect = document.query('#color');
+    colorSelect = document.querySelector('#color');
     colorSelect.onChange.listen((Event e) {
       pen.color = colorSelect.value;
     });
 
-    widthSelect = document.query('#width');
+    widthSelect = document.querySelector('#width');
     widthSelect.onChange.listen((Event e) {
       try {
         pen.width = int.parse(widthSelect.value);
@@ -62,23 +62,23 @@ class Board {
       }
     });
 
-    downCheckbox = document.query('#down');
+    downCheckbox = document.querySelector('#down');
     downCheckbox.onChange.listen((Event e) {
       pen.down = downCheckbox.checked;
     });
 
-    writeInput = document.query('#write');
+    writeInput = document.querySelector('#write');
     writeInput.onChange.listen((Event e) {
       pen.write = writeInput.value;
     });
 
-    visibleCheckbox = document.query('#visible');
+    visibleCheckbox = document.querySelector('#visible');
     visibleCheckbox.onChange.listen((Event e) {
       pen.visible = visibleCheckbox.checked;
     });
 
-    artCountInput = document.query('#artCount');
-    artButton = document.query('#art');
+    artCountInput = document.querySelector('#artCount');
+    artButton = document.querySelector('#art');
     artButton.onClick.listen((MouseEvent e) {
       try {
         pen.art(int.parse(artCountInput.value));
@@ -87,8 +87,8 @@ class Board {
       }
     });
 
-    onDartCountInput = document.query('#onDartCount');
-    onDartButton = document.query('#onDart');
+    onDartCountInput = document.querySelector('#onDartCount');
+    onDartButton = document.querySelector('#onDart');
     onDartButton.onClick.listen((MouseEvent e) {
       try {
         randomProgram(pen,
@@ -98,18 +98,18 @@ class Board {
       }
     });
 
-    eraseButton = document.query('#erase');
+    eraseButton = document.querySelector('#erase');
     eraseButton.onClick.listen((MouseEvent e) {
       pen.erase();
       _init();
     });
 
-    exampleButton = document.query('#example');
+    exampleButton = document.querySelector('#example');
     exampleButton.onClick.listen((MouseEvent e) {
       pen.example(randomInt(pen.examples.length - 1));
     });
 
-    programSelect = document.query('#program');
+    programSelect = document.querySelector('#program');
     programSelect.onChange.listen((Event e) {
       try {
         if (programSelect.value == 'random example') {
@@ -124,18 +124,18 @@ class Board {
 
     // drawing
 
-    canvas = document.query('#canvas');
+    canvas = document.querySelector('#canvas');
     context = canvas.getContext('2d');
     pen.drawingWidth = canvas.width;
     pen.drawingHeight = canvas.height;
 
     // bellow drawing
 
-    turnInput = document.query('#turn');
-    advanceInput = document.query('#advance');
-    repeatInput = document.query('#repeat');
+    turnInput = document.querySelector('#turn');
+    advanceInput = document.querySelector('#advance');
+    repeatInput = document.querySelector('#repeat');
 
-    moveButton = document.query('#move');
+    moveButton = document.querySelector('#move');
     moveButton.onClick.listen((MouseEvent e) {
       try {
         num turn = double.parse(turnInput.value);
@@ -147,18 +147,18 @@ class Board {
       }
     });
 
-    randomButton = document.query('#random');
+    randomButton = document.querySelector('#random');
     randomButton.onClick.listen((MouseEvent e) {
       pen.moveRandom();
     });
 
-    startButton = document.query('#start');
+    startButton = document.querySelector('#start');
     startButton.onClick.listen((MouseEvent e) {
       pen.moveTo(pen.startX, pen.startY);
     });
 
-    leftInput = document.query('#leftTurn');
-    leftButton = document.query('#left');
+    leftInput = document.querySelector('#leftTurn');
+    leftButton = document.querySelector('#left');
     leftButton.onClick.listen((MouseEvent e) {
       try {
         // num value = leftInput.valueAsNumber; // ??
@@ -168,8 +168,8 @@ class Board {
       }
     });
 
-    rightInput = document.query('#rightTurn');
-    rightButton = document.query('#right');
+    rightInput = document.querySelector('#rightTurn');
+    rightButton = document.querySelector('#right');
     rightButton.onClick.listen((MouseEvent e) {
       try {
         pen.right(double.parse(rightInput.value));
@@ -178,8 +178,8 @@ class Board {
       }
     });
 
-    backwardInput = document.query('#backwardAdvance');
-    backwardButton = document.query('#backward');
+    backwardInput = document.querySelector('#backwardAdvance');
+    backwardButton = document.querySelector('#backward');
     backwardButton.onClick.listen((MouseEvent e) {
       try {
         pen.backward(double.parse(backwardInput.value));
@@ -188,8 +188,8 @@ class Board {
       }
     });
 
-    forwardInput = document.query('#forwardAdvance');
-    forwardButton = document.query('#forward');
+    forwardInput = document.querySelector('#forwardAdvance');
+    forwardButton = document.querySelector('#forward');
     forwardButton.onClick.listen((MouseEvent e) {
       try {
         pen.forward(double.parse(forwardInput.value));
