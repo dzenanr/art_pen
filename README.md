@@ -19,7 +19,7 @@ inspiration.
 
 [**Using DArt Pen**](http://goo.gl/OvQWwN)
 
-[**dartling: Domain Model Framework**](https://docs.google.com/document/d/1xzjqxbJdYxn6Qpx_kIhCqCCjk5yabbXiOng8sixMjdc/edit?usp=sharing)
+[**dartling: Domain Model Framework**](http://goo.gl/Fd08zZ)
 
 [*Learning Dart*](http://www.packtpub.com/learning-dart/book) by Dzenan Ridjanovic & Ivo Balbaert
 
