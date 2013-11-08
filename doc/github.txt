@@ -30,18 +30,18 @@ http://help.github.com/create-a-repo/
 
 Create a New Repository
 Project Name: art_pen
-Description: 
-  Drawing a smart dart art. 
-  If you are less artistic, use commands, based on the Logo programming language for children, to learn basic programming concepts by drawing.    
-  
+Description:
+  Drawing a smart dart art.
+  If you are less artistic, use commands, based on the Logo programming language for children, to learn basic programming concepts by drawing.
+
 Next steps:
-  cd git/dart/dartling_examples/art_pen
+  cd git/dart/game/art_pen
   git init
   git status
   git add .
   git commit -m 'initial version'
   git remote add origin https://github.com/dzenanr/art_pen.git
-  git push -u origin master     
+  git push -u origin master
 
 ----------------------------------------------------------------------
 
@@ -49,7 +49,7 @@ Git with Git Bash
 
 Clone a remote repository into a local repository.
 
-cd git/dart/dartling_examples
+cd git/dart/game/art_pen
 git clone https://github.com/dzenanr/art_pen.git
 cd art_pen
 
@@ -68,7 +68,7 @@ git pull origin master
 
 Work with a local repository
 
-cd git/dart/dartling_examples/art_pen
+cd git/dart/game/art_pen
 
 git add .
 
@@ -119,7 +119,7 @@ Switching from spiral to master
 
 to exclude js:
 git checkout art_pen.dart.js
-or 
+or
 (see http://scottr.org/presentations/git-in-5-minutes/)
 git stash
 
