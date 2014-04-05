@@ -5,12 +5,10 @@ description: DArt Pen is a version of the Logo language. dartling is a domain mo
 homepage: http://ondart.me/
 documentation: http://goo.gl/OvQWwN
 environment:
-  sdk: '>=0.8.10+8 <2.0.0'
+  sdk: '>=1.2.0 <2.0.0'
 dependencies:
-  browser: '>=0.9.0 <0.10.0'
+  browser: '>=0.10.0 <0.11.0'
   dartling:
-    git: 'https://github.com/dzenanr/dartling.git'
-    version: '>=2.0.0 <3.0.0'
+    git: https://github.com/dzenanr/dartling.git
   dartling_default_app:
-    git: 'https://github.com/dzenanr/dartling_default_app.git'
-    version: '>=1.0.5 <2.0.0'
+    git: https://github.com/dzenanr/dartling_default_app.git
