@@ -25,6 +25,7 @@ class PenEntries extends ModelEntries {
     if (concept.code == "Line") {
       return new Lines(concept);
     }
+    return null;
   }
 
   ConceptEntity newEntity(String conceptCode) {
@@ -38,6 +39,7 @@ class PenEntries extends ModelEntries {
     if (concept.code == "Line") {
       return new Line(concept);
     }
+    return null;
   }
 
   fromJsonToData() {

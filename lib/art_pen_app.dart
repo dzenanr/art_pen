@@ -34,7 +34,6 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 library art_pen_app;
 
 import 'dart:html';
-import 'dart:async';
 import 'dart:math';
 
 import 'package:dartling/dartling.dart';
