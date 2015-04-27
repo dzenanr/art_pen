@@ -2,7 +2,7 @@
 
 based on [Semantic Versioning](http://semver.org/)
 
-*1.0.2* 2014-03-14
+*1.0.2* 2014-04-27
 
 + update to dartling 2.0.1
 
