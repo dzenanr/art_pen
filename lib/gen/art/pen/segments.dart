@@ -4,7 +4,8 @@ part of art_pen;
 
 abstract class SegmentGen extends ConceptEntity<Segment> {
 
-  SegmentGen(Concept concept) : super.of(concept) {
+  SegmentGen(Concept concept) {
+    this.concept = concept;
     Concept lineConcept = concept.model.concepts.singleWhereCode("Line");
     setChild("lines", new Lines(lineConcept));
   }
@@ -26,7 +27,9 @@ abstract class SegmentGen extends ConceptEntity<Segment> {
 
 abstract class SegmentsGen extends Entities<Segment> {
 
-  SegmentsGen(Concept concept) : super.of(concept);
+  SegmentsGen(Concept concept) {
+    this.concept = concept;
+  }
 
   Segments newEntities() => new Segments(concept);
 

@@ -44,8 +44,7 @@ genCode() {
   // change dartling to yourDomainName
   // change Skeleton to YourModelName
   // change "Skeleton" to "YourModelName"
-  Model artPenModel =
-      fromJsonToModel(artPenModelJson, artDomain, "Pen");
+  fromJsonToModel(artPenModelJson, artDomain, "Pen");
 
   repo.domains.add(artDomain);
 

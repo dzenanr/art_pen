@@ -4,7 +4,9 @@ part of art_pen;
 
 abstract class LineGen extends ConceptEntity<Line> {
 
-  LineGen(Concept concept) : super.of(concept);
+  LineGen(Concept concept) {
+    this.concept = concept;
+  }
 
   Segment get segment => getParent("segment");
   set segment(Segment p) => setParent("segment", p);
@@ -36,7 +38,9 @@ abstract class LineGen extends ConceptEntity<Line> {
 
 abstract class LinesGen extends Entities<Line> {
 
-  LinesGen(Concept concept) : super.of(concept);
+  LinesGen(Concept concept) {
+    this.concept = concept;
+  }
 
   Lines newEntities() => new Lines(concept);
 
