@@ -37,7 +37,7 @@ import 'package:dartling_default_app/dartling_default_app.dart';
 
 import 'package:art_pen/art_pen.dart';
 
-initArtData(ArtRepo artRepo) {
+void initArtData(ArtRepo artRepo) {
    var artModels =
        artRepo.getDomainModels(ArtRepo.artDomainCode);
 
@@ -48,7 +48,7 @@ initArtData(ArtRepo artRepo) {
    artPenEntries.displayJson();
 }
 
-showArtData(ArtRepo artRepo) {
+void showArtData(ArtRepo artRepo) {
    var mainView = new View(document, "main");
    mainView.repo = artRepo;
    new RepoMainSection(mainView);

@@ -4,7 +4,7 @@ import 'package:dartling/dartling.dart';
 import 'package:art_pen/art_pen.dart';
 import 'package:art_pen/art_pen_app.dart';
 
-main() {
+void main() {
   final repo = new ArtRepo();
   final board = new Board(repo);
 

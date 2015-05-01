@@ -35,7 +35,7 @@ import 'package:dartling/dartling.dart';
 
 import 'package:art_pen/art_pen.dart';
 
-genCode() {
+void genCode() {
   var repo = new Repo();
 
   // change "Dartling" to "YourDomainName"
@@ -51,7 +51,7 @@ genCode() {
   repo.gen('art_pen');
 }
 
-initArtData(ArtRepo artRepo) {
+void initArtData(ArtRepo artRepo) {
    var artModels =
        artRepo.getDomainModels(ArtRepo.artDomainCode);
 
